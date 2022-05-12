@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-// const contentController = require("./");
+const contentController = require("./controllers/contentController");
 
 app.use(cors());
 app.use(express.json());
@@ -12,10 +12,10 @@ app.get("/", (_, response) => {
   response.send("Welcome to NiFTY World Backend");
 });
 
-// app.use("/")
+app.use("/content", contentController);
 
 app.get("*", (_, response) => {
   response.status(404).json({ error: "Page not found" });
 });
 
-module.exports = app
+module.exports = app;
