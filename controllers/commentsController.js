@@ -1,5 +1,10 @@
 const express = require("express");
-const { getAllComments, getComments } = require("../queries/comments");
+const {
+  getAllComments,
+  getComment,
+  createComment,
+  deleteComment,
+} = require("../queries/comments");
 const comments = express.Router();
 
 comments.get("/", async (_, response) => {
@@ -15,6 +20,20 @@ comments.get("/", async (_, response) => {
 comments.get("/:id", async (req, res) => {
   const comment = await getComment(req.params.id);
   res.status(200).json(comment);
+});
+
+comments.post("/", async (req, res) => {
+  const comment = await createComment(req.body);
+  res.status(200).json(comment);
+});
+
+comments.delete("/:id", async (req, res) => {
+  try {
+    const deletedComment = await deleteComment(req.params.id);
+    res.status(200).json(deletedComment);
+  } catch (err) {
+    res.status(500).json({ err: "No comments to show" });
+  }
 });
 
 module.exports = comments;
