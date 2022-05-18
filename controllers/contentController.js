@@ -1,7 +1,10 @@
 const express = require("express");
 const content = express.Router();
+const quizzesController = require("./quizzesController")
 
-const { getAllContent } = require("../queries/content");
+const { getAllContent , getContent} = require("../queries/content");
+
+content.use("/:id/quizzes", quizzesController)
 
 // All Content
 content.get("/", async (_, response) => {
@@ -13,5 +16,11 @@ content.get("/", async (_, response) => {
   }
   response.status(200).json(allContent);
 });
+
+//Specific Content
+content.get("/:id", async (req, res) => {
+  const content = await getContent(req.params.id);
+  res.status(200).json(content)
+})
 
 module.exports = content;

@@ -3,6 +3,8 @@ const app = express();
 const cors = require("cors");
 
 const contentController = require("./controllers/contentController");
+const quizzesController = require("./controllers/quizzesController");
+const commentsController = require("./controllers/commentsController");
 
 app.use(cors());
 app.use(express.json());
@@ -13,6 +15,8 @@ app.get("/", (_, response) => {
 });
 
 app.use("/content", contentController);
+app.use("/quizzes", quizzesController);
+app.use("/comments", commentsController);
 
 app.get("*", (_, response) => {
   response.status(404).json({ error: "Page not found" });
