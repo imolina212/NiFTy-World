@@ -4,6 +4,7 @@ const {
   getComment,
   createComment,
   deleteComment,
+  updateComment,
 } = require("../queries/comments");
 const comments = express.Router();
 
@@ -33,6 +34,25 @@ comments.delete("/:id", async (req, res) => {
     res.status(200).json(deletedComment);
   } catch (err) {
     res.status(500).json({ err: "No comments to show" });
+  }
+});
+
+// comments.put("/:id", async (req, res) => {
+//   try {
+//     const comment = await updateComment(req.params.id, req.body);
+//     res.status(200).json(comment);
+//   } catch (error) {
+//     res.status(400).json({ error: "Comment not found" });
+//   }
+// });
+
+comments.put("/:id", async (req, res) => {
+  console.log("UPDATE req to /comments/:id");
+  const updatedComment = await updateComment(req.params.id, req.body);
+  if (updatedComment.id) {
+    res.status(200).json(updatedComment);
+  } else {
+    res.status(404).json("Comment does not exist");
   }
 });
 
