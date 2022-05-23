@@ -17,6 +17,7 @@ app.get("/", (_, response) => {
 app.use("/content", contentController);
 app.use("/quizzes", quizzesController);
 app.use("/comments", commentsController);
+// app.use("/comment
 
 app.get("*", (_, response) => {
   response.status(404).json({ error: "Page not found" });
