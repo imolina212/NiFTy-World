@@ -16,3 +16,10 @@ CREATE TABLE quizzes (
     answer TEXT,
     content_id INTEGER REFERENCES content (id)
 );
+
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    name TEXT,
+    post TEXT,
+    date DATE
+);
