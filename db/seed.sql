@@ -6,7 +6,8 @@ INSERT INTO categories (name) VALUES
 ('Finances: Money Matters!');
 
 INSERT INTO lessons (lesson_title, videos, reading_material) VALUES
-('NFT', 'opensea.com', 'An NFT is a non-fungible token');
+('NFT', 'opensea.com', 'An NFT is a non-fungible token'),
+('Crypto', 'Cryprocurrency.com', 'Crypto helps you buy toys');
 
 INSERT INTO questions ( question_text, answer) VALUES
 ('What is a NFT?', 'An NFT is a non-fungible token');
