@@ -8,6 +8,7 @@ INSERT INTO categories (name) VALUES
 INSERT INTO lessons (lesson_title, videos, reading_material) VALUES
 ('NFT', 'opensea.com', 'An NFT is a non-fungible token');
 ('Cryptocurrency', 'coinbase.com', 'Unlike NFTs, Physical money and cryptocurrencies are “fungible,” meaning they can be traded or exchanged for one another. They are also equal in value—one dollar is always worth another dollar; one Bitcoin is always equal to another Bitcoin. ');
+('NFT Risks as an Investment', 'Like anything new and exciting, there are risks when investing in them. Read the risks below, and answer some questions about what you read - you are on your way to NiFTy-rific Knowledge! ')
 
 INSERT INTO questions ( question_text, answer) VALUES
 ('What is a NFT?', 'An NFT is a non-fungible token'),
