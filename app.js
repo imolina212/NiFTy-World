@@ -2,9 +2,10 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-const contentController = require("./controllers/contentController");
-const quizzesController = require("./controllers/quizzesController");
+const lessonsController = require("./controllers/lessonsController");
+const questionsController = require("./controllers/questionsController");
 const commentsController = require("./controllers/commentsController");
+const categoriesController = require("./controllers/categoriesController");
 
 app.use(cors());
 app.use(express.json());
@@ -14,9 +15,10 @@ app.get("/", (_, response) => {
   response.send("Welcome to NiFTY World Backend");
 });
 
-app.use("/content", contentController);
-app.use("/quizzes", quizzesController);
+app.use("/lessons", lessonsController);
+app.use("/questions", questionsController);
 app.use("/comments", commentsController);
+app.use("/categories", categoriesController);
 
 app.get("*", (_, response) => {
   response.status(404).json({ error: "Page not found" });
