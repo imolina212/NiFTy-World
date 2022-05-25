@@ -1,10 +1,16 @@
 \c nifty_world_dev;
 
-INSERT INTO content (lesson_categories, videos, reading_material) VALUES
-('NFT', 'opensea.com', 'An NFT is a non-fungible token');
+INSERT INTO categories (name) VALUES
+('NFT'),
+('Cryptocurrency'),
+('Finances: Money Matters!');
 
-INSERT INTO quizzes (category , question, answer) VALUES
-('NFT', 'What is a NFT?', 'An NFT is a non-fungible token');
+INSERT INTO lessons (lesson_title, videos, reading_material) VALUES
+('NFT', 'opensea.com', 'An NFT is a non-fungible token'),
+('Crypto', 'Cryprocurrency.com', 'Crypto helps you buy toys');
+
+INSERT INTO questions ( question_text, answer) VALUES
+('What is a NFT?', 'An NFT is a non-fungible token');
 
 INSERT INTO comments (name, post, date) VALUES
 ('Shawnee', 'I need some cryto, gimme some now!!', '2022-05-17'),
