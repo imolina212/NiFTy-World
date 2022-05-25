@@ -15,10 +15,10 @@ app.get("/", (_, response) => {
   response.send("Welcome to NiFTY World Backend");
 });
 
-app.use("/lessons", lessonsController);
-app.use("/questions", questionsController);
-app.use("/comments", commentsController);
-app.use("/categories", categoriesController);
+app.use("/lesson", lessonsController);
+app.use("/question", questionsController);
+app.use("/comment", commentsController);
+app.use("/categorie", categoriesController);
 
 app.get("*", (_, response) => {
   response.status(404).json({ error: "Page not found" });
