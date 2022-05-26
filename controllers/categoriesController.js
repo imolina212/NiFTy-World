@@ -3,7 +3,6 @@ const categories = express.Router({ mergeParams: true });
 const lessonsController = require("./lessonsController");
 
 const { getAllCategories, getCategory } = require("../queries/categories");
-const res = require("express/lib/response");
 
 categories.use("/:id/lessons", lessonsController);
 

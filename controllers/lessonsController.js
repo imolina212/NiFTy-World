@@ -2,7 +2,7 @@ const express = require("express");
 const lessons = express.Router();
 const questionsController = require("./questionsController");
 
-const { getAllLessons, getLessons } = require("../queries/lessons");
+const { getAllLessons , getLessons } = require("../queries/lessons");
 
 lessons.use("/:id/questions", questionsController);
 
@@ -17,10 +17,16 @@ lessons.get("/", async (_, response) => {
   response.status(200).json(allLessons);
 });
 
-//Specific lesson
+// Specific lesson
 lessons.get("/:id", async (req, res) => {
   const lessons = await getLessons(req.params.id);
   res.status(200).json(lessons);
 });
+
+//Specific lesson
+// lessons.get("/:id", async (req, res) => {
+//   const lesson = await getLesson(req.params.id);
+//   res.status(200).json(lesson);
+// });
 
 module.exports = lessons;

@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+app.use(cors());
+app.use(express.json());
+
 const lessonsController = require("./controllers/lessonsController");
 const questionsController = require("./controllers/questionsController");
 const commentsController = require("./controllers/commentsController");
 const categoriesController = require("./controllers/categoriesController");
-
-app.use(cors());
-app.use(express.json());
 
 app.get("/", (_, response) => {
   console.log("GET request to /");
