@@ -2,19 +2,24 @@ DROP DATABASE IF EXISTS nifty_world_dev;
 CREATE DATABASE nifty_world_dev;
 \c nifty_world_dev;
 
-CREATE TABLE content (
+CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
-    lesson_categories TEXT,
-    videos TEXT,
-    reading_material TEXT
+    name TEXT
 );
 
-CREATE TABLE quizzes (
+CREATE TABLE lessons (
     id SERIAL PRIMARY KEY,
-    category TEXT,
-    question TEXT,
+    lesson_title TEXT,
+    videos TEXT,
+    reading_material TEXT,
+    categories_id INTEGER REFERENCES categories (id)
+);
+
+CREATE TABLE questions (
+    id SERIAL PRIMARY KEY,
+    question_text TEXT,
     answer TEXT,
-    content_id INTEGER REFERENCES content (id)
+    lessons_id INTEGER REFERENCES lessons (id)
 );
 
 CREATE TABLE comments (
