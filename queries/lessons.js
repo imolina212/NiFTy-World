@@ -11,14 +11,24 @@ const getAllLessons = async () => {
 
 const getLessons = async (id) => {
   try {
-    const lessons = await db.one("SELECT * FROM lessons WHERE id=$1", id);
+    const lessons = await db.any("SELECT * FROM lessons WHERE lessons.categories_id=$1", id);
     return lessons;
   } catch (error) {
     throw error;
   }
 };
 
+// const getLesson = async (id) => {
+//   try {
+//     const lessons = await db.one("SELECT * FROM lessons WHERE id=$1", id);
+//     return lessons;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
 module.exports = {
   getAllLessons,
   getLessons,
+  // getLesson
 };

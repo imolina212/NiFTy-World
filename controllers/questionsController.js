@@ -1,5 +1,5 @@
 const express = require("express");
-const { getAllQuestions, getQuiz } = require("../queries/questions");
+const { getAllQuestions, getQuestion } = require("../queries/questions");
 
 const questions = express.Router({ mergeParams: true });
 
@@ -9,7 +9,7 @@ questions.get("/", async (req, res) => {
 });
 
 questions.get("/:id", async (req, res) => {
-  const quiz = await getQuiz(req.params.id);
+  const quiz = await getQuestion(req.params.id);
   res.status(200).json(quiz);
 });
 
