@@ -7,10 +7,10 @@ INSERT INTO categories (name) VALUES
 
 INSERT INTO lessons (lesson_title, videos, reading_material, categories_id) VALUES
 ('What is an NFT?', 'opensea.com', 'An NFT is a non-fungible token', 1),
-('How can I create an NFT?', 'opensea.com', 'You can code them.', 1),
-('How can I buy an NFT?', 'opensea.com', 'NFT marketplaces', 1),
-('Crypto', 'Cryprocurrency.com', 'Crypto helps you buy toys', 2),
-('Finance', 'Finance.com', 'Finance helps you buy toys', 3);
+('What is fungibility?', 'opensea.com', 'Fungibility is the ability of a good or asset to be interchanged with other individual goods or assets of the same type.', 1),
+('What are some examples of NFT?', 'opensea.com', 'Tweets, videos, digital art and even source code.', 1),
+('What is cryptocurrency?', 'Cryprocurrency.com', 'A digital currency in which transactions are verified and records maintained by a decentralized system using cryptography.', 2),
+('What is finance?', 'Finance.com', 'The management of large amounts of money, especially by governments or large companies.', 3);
 
 INSERT INTO questions ( question_text, answer, lessons_id) VALUES
 ('What is a NFT?', 'An NFT is a non-fungible token', 1),
