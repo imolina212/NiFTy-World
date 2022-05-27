@@ -7,8 +7,8 @@ INSERT INTO categories (name) VALUES
 
 INSERT INTO lessons (lesson_title, videos, reading_material, categories_id) VALUES
 ('What is an NFT?', 'opensea.com', 'An NFT is a non-fungible token', 1),
-('What is an NFT2?', 'opensea.com', 'An NFT is a non-fungible token', 1),
-('What is an NFT3?', 'opensea.com', 'An NFT is a non-fungible token', 1),
+('How can I create an NFT?', 'opensea.com', 'You can code them.', 1),
+('How can I buy an NFT?', 'opensea.com', 'NFT marketplaces', 1),
 ('Crypto', 'Cryprocurrency.com', 'Crypto helps you buy toys', 2),
 ('Finance', 'Finance.com', 'Finance helps you buy toys', 3);
 
