@@ -42,9 +42,24 @@ const deleteComment = async (id) => {
   }
 };
 
+const updateComment = async (id, comment) => {
+  console.log(id, comment);
+  try {
+    const updatedComment = await db.one(
+      "UPDATE comments SET name=$2, post=$3, date=$4 WHERE id=$1 RETURNING *",
+      [id, comment.name, comment.post, comment.date]
+    );
+    console.log(updatedComment);
+    return updatedComment;
+  } catch (err) {
+    return err;
+  }
+};
+
 module.exports = {
   getAllComments,
   getComment,
   createComment,
   deleteComment,
+  updateComment,
 };
