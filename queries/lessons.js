@@ -9,10 +9,46 @@ const getAllLessons = async () => {
   }
 };
 
+// const getLessons = async (id) => {
+//   try {
+//     const lessons = await db.any(
+//       "SELECT * FROM lessons WHERE lessons.categories_id=$1",
+//       id
+//     );
+//     return lessons;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+// const getLesson = async (id) => {
+//   try {
+//     const lessons = await db.one("SELECT * FROM lessons WHERE id=$1", id);
+//     return lessons;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+const getLesson = async (id) => {
+  try {
+    const lesson = await db.one(
+      "SELECT * FROM lessons WHERE lessons.id=$1",
+      id
+    );
+    return lesson;
+  } catch (error) {
+    throw error;
+  }
+};
+
 const getLessons = async (id) => {
   try {
-    const lessons = await db.one("SELECT * FROM lessons WHERE id=$1", id);
-    return lessons;
+    const allLessons = await db.any(
+      "SELECT * FROM lessons WHERE lessons.categories_id=$1",
+      id
+    );
+    return allLessons;
   } catch (error) {
     throw error;
   }
@@ -20,5 +56,6 @@ const getLessons = async (id) => {
 
 module.exports = {
   getAllLessons,
+  getLesson,
   getLessons,
 };

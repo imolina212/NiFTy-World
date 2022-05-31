@@ -22,7 +22,6 @@ CREATE TABLE questions (
     lessons_id INTEGER REFERENCES lessons (id)
 );
 
-
 CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
     name TEXT,

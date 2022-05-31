@@ -1,9 +1,8 @@
 const express = require("express");
-const categories = express.Router({ mergeParams: true });
+const categories = express.Router();
 const lessonsController = require("./lessonsController");
 
 const { getAllCategories, getCategory } = require("../queries/categories");
-const res = require("express/lib/response");
 
 categories.use("/:id/lessons", lessonsController);
 
@@ -16,6 +15,7 @@ categories.get("/", async (_, response) => {
     response.status(500).json({ err: "No category" });
   }
 });
+
 //Specific Category
 categories.get("/:id", async (req, res) => {
   try {
