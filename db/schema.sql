@@ -10,7 +10,7 @@ CREATE TABLE categories (
 CREATE TABLE lessons (
     id SERIAL PRIMARY KEY,
     lesson_title TEXT,
-    videos TEXT,
+    video_url TEXT,
     reading_material TEXT,
     categories_id INTEGER REFERENCES categories (id)
 );
