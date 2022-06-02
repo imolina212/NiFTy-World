@@ -9,6 +9,7 @@ INSERT INTO lessons (lesson_title, videos, reading_material, categories_id) VALU
 ('What is an NFT?', 'opensea.com', 'An NFT is a non-fungible token', 1),
 ('What is fungibility?', 'opensea.com', 'Fungibility is the ability of a good or asset to be interchanged with other individual goods or assets of the same type.', 1),
 ('What are some examples of NFT?', 'opensea.com', 'Tweets, videos, digital art and even source code.', 1),
+
 ('Where can I show off my NFTs?', 'opensea.com', 'There are several ways to show off your newly purchased NFT, including digital enviroments such as the metaverse', 1),
 ('What is cryptocurrency?', 'Cryprocurrency.com', 'A digital currency in which transactions are verified and records maintained by a decentralized system using cryptography.', 2),
 ('Where can I store my cryptocurrency?', 'https://cryptonews.com/guides/how-to-store-cryptocurrency-safely.htm', 'In order to store your cryptocurrency safely you will need to get a crypto wallet. There are four types of cryptocurrency wallets: paper, hardware, cloud, and online. Each have there own pros and cons like wallets always being connected to the internet (hot wallet) for quick and easy access but might not be the most secure option. On the other hand, if you went with an offline (cold wallet), its pros will be that its one of the more secure options while cons being its not the quickest option available so it might negatively affect those who buy and sell crypto very frequently so choose wisely!', 2),

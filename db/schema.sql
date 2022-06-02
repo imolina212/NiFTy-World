@@ -26,5 +26,6 @@ CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
     name TEXT,
     post TEXT,
-    date DATE
+    -- date DATE
+    date smalldatetime default GETDATE()
 );
