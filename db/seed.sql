@@ -5,8 +5,8 @@ INSERT INTO categories (name) VALUES
 ('Cryptocurrency'),
 ('Finances: Money Matters!');
 
-INSERT INTO lessons (lesson_title, videos, reading_material, categories_id) VALUES
-('What is an NFT?', 'opensea.com', 'An NFT is a non-fungible token', 1),
+INSERT INTO lessons (lesson_title, videos_url, reading_material, categories_id) VALUES
+('What is an NFT?', '/videos/nftvideo.mp4', 'An NFT is a non-fungible token', 1),
 ('What is fungibility?', 'opensea.com', 'Fungibility is the ability of a good or asset to be interchanged with other individual goods or assets of the same type.', 1),
 ('What are some examples of NFT?', 'opensea.com', 'Tweets, videos, digital art and even source code.', 1),
 
