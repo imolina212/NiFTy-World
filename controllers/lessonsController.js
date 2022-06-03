@@ -3,6 +3,7 @@ const lessons = express.Router({ mergeParams: true });
 const questionsController = require("./questionsController");
 
 const { getLessons, getLesson } = require("../queries/lessons");
+const { getQuestions } = require("../queries/questions");
 
 lessons.use("/:id/questions", questionsController);
 
@@ -31,6 +32,15 @@ lessons.get("/:id", async (req, res) => {
   try {
     const lesson = await getLesson(req.params.id);
     res.status(200).json(lesson);
+  } catch (err) {
+    res.status(500).json({ err: "No lessons" });
+  }
+});
+
+lessons.get("/:id/questions", async (req, res) => {
+  try {
+    const questions = await getQuestions(req.params.id);
+    res.status(200).json(questions);
   } catch (err) {
     res.status(500).json({ err: "No lessons" });
   }

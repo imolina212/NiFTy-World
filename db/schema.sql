@@ -10,7 +10,7 @@ CREATE TABLE categories (
 CREATE TABLE lessons (
     id SERIAL PRIMARY KEY,
     lesson_title TEXT,
-    videos TEXT,
+    videos_url TEXT,
     reading_material TEXT,
     categories_id INTEGER REFERENCES categories (id)
 );
@@ -26,6 +26,6 @@ CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
     name TEXT,
     post TEXT,
-    -- date DATE
-    date smalldatetime default GETDATE()
+    date DATE
+    -- date smalldatetime default GETDATE()
 );
