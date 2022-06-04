@@ -33,5 +33,5 @@ const getQuestions = async (id) => {
 module.exports = {
   // getAllQuestions,
   getQuestion,
-  getQuestions
+  getQuestions,
 };
