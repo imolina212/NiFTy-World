@@ -19,6 +19,7 @@ CREATE TABLE questions (
     id SERIAL PRIMARY KEY,
     question_text TEXT,
     answer TEXT,
+    wrong_answer TEXT,
     lessons_id INTEGER REFERENCES lessons (id)
 );
 

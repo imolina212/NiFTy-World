@@ -18,20 +18,20 @@ INSERT INTO lessons (lesson_title, videos_url, reading_material, categories_id) 
 ('What is net worth?', 'Finance.com', 'Your net worth is the amount of assets you currently have minus the amount of liabilities you currently own. It is a great way to measure where your overall finances are at to allow yourself to better manage your money.', 3),
 ('What is debit and credit?', 'Finance.com' , 'A debit purchase is when you have the money for an item that you want and pay for it, a credit purchase is when you recive the item and promise to pay for it at a leter time.', 3);
 
-INSERT INTO questions ( question_text, answer, lessons_id) VALUES
-('What is a NFT?', 'An NFT is a non-fungible token', 1),
-('What is fungibility?', 'Fungibility is the ability of a good or asset to be interchanged with other individual goods or assets of the same type.', 1),
-('What are some examples of NFT?', 'Tweets, videos, digital art and even source code.', 1),
-('Where can I show off my NFTS?', 'There are several ways to show off your newly purchased NFT, including digital enviroments such as the metaverse', 1),
-('What is a Crypto?', 'A digital currency in which transactions are verified and records maintained by a decentralized system using cryptography.', 2),
-('How many type of cryptocurrency wallets are there?', 'four', 2),
-('Who created Bitcoin?', 'Bitcoin was created by Satoshi Nakamoto', 2),
+INSERT INTO questions ( question_text, answer, wrong_answer, lessons_id) VALUES
+('What is a NFT?', 'An NFT is a non-fungible token', 'NFT is a toy', 1),
+('What is fungibility?', 'Fungibility is the ability of a good or asset to be interchanged with other individual goods or assets of the same type.', 'Fungibility is the ability to manage how many toys you have.', 1),
+('What are some examples of NFT?', 'Tweets, videos, digital art and even source code.', 'A quarter, dime, and a nickle.', 1),
+('Where can I show off my NFTS?', 'There are several ways to show off your newly purchased NFT, including digital enviroments such as the metaverse', 'I can show off my NFTs on Amazon', 1),
+('What is Crypto?', 'A digital currency in which transactions are verified and records maintained by a decentralized system using cryptography.', 'A $20 bill', 2),
+('How many type of cryptocurrency wallets are there?', 'Four', 'One', 2),
+('Who created Bitcoin?', 'Bitcoin was created by Satoshi Nakamoto', 'Bitcoin was created by Eric Cave', 2),
 -- ('Where does crypto live?', 'Crypto lives on the blockchain', 2),
 -- ('What is savings?', 'Savings is the ability to compound money', 3),
-('What is a Finance?', 'Finance is the management of large amounts of money.', 3),
-('What is an asset', 'An asset is any resource or good used to create cash flow.', 3),
-('What is net worth?', 'Your net worth is the amount of assets you currently have minus the amount of liabilities you currently own.', 3),
-('What is a debit purchase?', 'When you purchase something when you actually have the money for it.', 3);
+('What is a Finance?', 'Finance is the management of large amounts of money.', 'Finance is a way to go swimming.', 3),
+('What is an asset', 'An asset is any resource or good used to create cash flow.', 'An asset is a good that is guranteed to lose value over time.', 3),
+('What is net worth?', 'Your net worth is the amount of assets you currently have minus the amount of liabilities you currently own.', 'Net worth is how much you make in a year.', 3),
+('What is a debit purchase?', 'When you purchase something when you actually have the money for it', 'A purchase that you have to pay back', 3);
 
 INSERT INTO comments (name, post, date) VALUES
 ('Shawnee', 'I need some cryto, gimme some now!!', '2022-05-17'),
